@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1087ba9f-64e5-4e33-9ed5-ebdef3049ddf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/item.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/reservation.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/ItemServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/ReservationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/user.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/reservation.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reservation.proto" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +80,7 @@
       <workItem from="1714989963009" duration="2091000" />
       <workItem from="1714999692078" duration="5000" />
       <workItem from="1714999699632" duration="7000" />
-      <workItem from="1715006420197" duration="3387000" />
+      <workItem from="1715006420197" duration="4561000" />
     </task>
     <servers />
   </component>
