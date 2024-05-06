@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1087ba9f-64e5-4e33-9ed5-ebdef3049ddf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/ItemServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/ReservationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/user.proto" afterDir="false" />
+    <list default="true" id="1087ba9f-64e5-4e33-9ed5-ebdef3049ddf" name="Changes" comment="feat: add service classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/reservation.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/reservation.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,9 +27,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2g5ab815imKosThweGjXuq4cm2p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ReservationServer.executor": "Run",
     "Maven.cw2-client [clean].executor": "Run",
     "Maven.cw2-client [install].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -58,10 +55,43 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="ReservationServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.reservation.ReservationServer" />
+      <module name="cw2-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.reservation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="cw2-server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="cw2-server" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReservationServer" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -80,11 +110,29 @@
       <workItem from="1714989963009" duration="2091000" />
       <workItem from="1714999692078" duration="5000" />
       <workItem from="1714999699632" duration="7000" />
-      <workItem from="1715006420197" duration="4561000" />
+      <workItem from="1715006420197" duration="5807000" />
+      <workItem from="1715012516659" duration="536000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: add service classes">
+      <option name="closed" value="true" />
+      <created>1715011223032</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715011223032</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add service classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add service classes" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
