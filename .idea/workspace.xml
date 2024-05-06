@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1087ba9f-64e5-4e33-9ed5-ebdef3049ddf" name="Changes" comment="feat: add server implementation">
+    <list default="true" id="1087ba9f-64e5-4e33-9ed5-ebdef3049ddf" name="Changes" comment="feat: add consistence implementation to reservation server">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/reservation/ReservationServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/reservation/service/ItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/reservation/service/ItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/item.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/item.proto" afterDir="false" />
     </list>
     <list id="1a70050a-2381-4166-815a-c20346e86d04" name="Changes by lasalhettiarachchi" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +103,7 @@
       <workItem from="1715015026906" duration="565000" />
       <workItem from="1715015605035" duration="50000" />
       <workItem from="1715015666777" duration="529000" />
-      <workItem from="1715017805976" duration="7043000" />
+      <workItem from="1715017805976" duration="9744000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add service classes">
       <option name="closed" value="true" />
@@ -120,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715013369667</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat: add consistence implementation to reservation server">
+      <option name="closed" value="true" />
+      <created>1715026904308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1715026904308</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +138,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: add service classes" />
     <MESSAGE value="feat: add server implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add server implementation" />
+    <MESSAGE value="feat: add consistence implementation to reservation server" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add consistence implementation to reservation server" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

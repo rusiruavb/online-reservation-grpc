@@ -78,7 +78,7 @@ public class ReservationServer {
 	public void startServer() {
 		Server server = ServerBuilder
 				.forPort(this.serverPort)
-				.addService(new ItemServiceImpl())
+				.addService(new ItemServiceImpl(this))
 				.addService(new ReservationServiceImpl())
 				.addService(new UserServiceImpl())
 				.build();
