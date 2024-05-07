@@ -2,16 +2,17 @@ package org.reservation.service;
 
 import io.grpc.stub.StreamObserver;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.user.*;
 
 public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
-    private Map<String, CreateUserRequest> users;
+    private Map<String, CreateUserRequest> users = new HashMap<>();
 
     @Override
     public void createUser(CreateUserRequest request, StreamObserver<CreateUserResponse> responseObserver) {
-        System.out.println("Create user request received" + request.getUserName());
+        System.out.println("Create user request received : " + request.getUserName());
         CreateUserRequest user = CreateUserRequest.newBuilder()
             .setUserName(request.getUserName())
             .setRole(request.getRole())
@@ -31,7 +32,7 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
 
     @Override
     public void loginUser(LoginUserRequest request, StreamObserver<LoginUserResponse> responseObserver) {
-        System.out.println("Login request received" + request.getUserName());
+        System.out.println("Login request received : " + request.getUserName());
         if (users.containsKey(request.getUserName())) {
             CreateUserRequest user = users.get(request.getUserName());
             if (user.getPassword().equals(request.getPassword())) {
@@ -43,9 +44,11 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
                 responseObserver.onNext(response);
                 responseObserver.onCompleted();
             } else {
+                System.out.println("Invalid password");
                 responseObserver.onError(new RuntimeException("Invalid password"));
             }
         } else {
+            System.out.println("User not found");   
             responseObserver.onError(new RuntimeException("User not found"));
         }
     }

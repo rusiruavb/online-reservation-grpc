@@ -27,7 +27,15 @@ public class ReservationServer {
 	public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
 		DistributedLock.setZooKeeperURL("localhost:2181");
 
-		ReservationServer server = new ReservationServer("localhost", 50051);
+		if (args.length != 2) {
+			System.out.println("Usage: ReservationServer <host> <port>");
+			System.exit(1);
+		}
+
+		String host = args[0] != null ? args[0] : "localhost";
+		Integer port = args[1] != null ? Integer.parseInt(args[1]) : 50051;
+
+		ReservationServer server = new ReservationServer(host, port);
 		server.startServer();
 	}
 
@@ -88,7 +96,7 @@ public class ReservationServer {
 			NameServiceClient nameServiceClient = new NameServiceClient(NAME_SERVICE_ADDRESS);
 			nameServiceClient.registerService("reservation", "localhost", serverPort, "grpc");
 			System.out.println("Server started, listening on " + serverPort);
-			tryToBeLeader();
+			tryToBeLeader(); // Start the Thread to campaign for leader
 			server.awaitTermination();
 		} catch (Exception e) {
 			System.out.println("Server error: " + e.getMessage());

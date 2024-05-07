@@ -2,6 +2,7 @@ package org.reservation.service;
 
 import io.grpc.stub.StreamObserver;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.reservation.CreateReservationRequest;
@@ -9,7 +10,7 @@ import org.reservation.CreateReservationResponse;
 import org.reservation.ReservationServiceGrpc;
 
 public class ReservationServiceImpl extends ReservationServiceGrpc.ReservationServiceImplBase {
-    private Map<Integer, CreateReservationRequest> reservations;
+    private Map<Integer, CreateReservationRequest> reservations = new HashMap<>();
 
     @Override
     public void createReservation(CreateReservationRequest request, StreamObserver<CreateReservationResponse> responseObserver) {
