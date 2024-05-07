@@ -18,30 +18,74 @@ public class ItemServiceImpl extends ItemServiceGrpc.ItemServiceImplBase {
 
     @Override
     public void addItem(AddItemRequest request, StreamObserver<AddItemResponse> responseObserver) {
-        if (server.isLeader()) {
-            items.put(request.getItemId(), request);
-            // TODO: Add item to the database
-        }
+        items.put(request.getItemId(), request);
 
+        AddItemResponse response = AddItemResponse.newBuilder()
+                .setItemId(request.getItemId())
+                .setQuantity(request.getQuantity())
+                .build();
+
+        responseObserver.onNext(response);
+        responseObserver.onCompleted();
     }
 
     @Override
     public void updateItem(UpdateItemRequest request, StreamObserver<UpdateItemResponse> responseObserver) {
-        super.updateItem(request, responseObserver);
+        if (server.isLeader()) {
+            UpdateItemResponse response = UpdateItemResponse.newBuilder()
+                    .setItemId(request.getItemId())
+                    .setQuantity(request.getQuantity())
+                    .build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } else {
+            responseObserver.onError(new RuntimeException("Not a leader"));
+        }
     }
 
     @Override
     public void updateQuantity(UpdateQuantityRequest request, StreamObserver<UpdateItemResponse> responseObserver) {
-        super.updateQuantity(request, responseObserver);
+        if (server.isLeader()) {
+            UpdateItemResponse response = UpdateItemResponse.newBuilder()
+                    .setItemId(request.getItemId())
+                    .setQuantity(request.getQuantity())
+                    .build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } else {
+            responseObserver.onError(new RuntimeException("Not a leader"));
+        }
     }
 
     @Override
     public void listItems(Empty request, StreamObserver<ListItemsResponse> responseObserver) {
-        super.listItems(request, responseObserver);
+        ListItemsResponse.Builder response = ListItemsResponse.newBuilder();
+
+        for (AddItemRequest item : items.values()) {
+            response.addItems(ListItemResponse.newBuilder()
+                    .setItemId(item.getItemId())
+                    .setQuantity(item.getQuantity())
+                    .build());
+        }
+
+        responseObserver.onNext(response.build());
+        responseObserver.onCompleted();
     }
 
     @Override
     public void removeItem(RemoveItemRequest request, StreamObserver<RemoveItemResponse> responseObserver) {
-        super.removeItem(request, responseObserver);
+        if (server.isLeader()) {
+            RemoveItemResponse response = RemoveItemResponse.newBuilder()
+                    .setMessage(request.getItemId() + " removed")
+                    .build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } else {
+            responseObserver.onError(new RuntimeException("Not a leader"));
+        
+        }
     }
 }
