@@ -29,6 +29,10 @@ public class ItemServiceImpl extends ItemServiceGrpc.ItemServiceImplBase {
                 .setDescription(request.getDescription())
                 .build();
 
+        System.out.println(item.toString());
+
+        items.put(request.getItemId(), item);
+
         AddItemResponse response = AddItemResponse.newBuilder()
                 .setItemId(request.getItemId())
                 .setName(request.getName())
@@ -80,7 +84,10 @@ public class ItemServiceImpl extends ItemServiceGrpc.ItemServiceImplBase {
         for (AddItemRequest item : items.values()) {
             response.addItems(ListItemResponse.newBuilder()
                     .setItemId(item.getItemId())
+                    .setName(item.getName())
+                    .setPrice(item.getPrice())
                     .setQuantity(item.getQuantity())
+                    .setDescription(item.getDescription())
                     .build());
         }
 
@@ -100,7 +107,7 @@ public class ItemServiceImpl extends ItemServiceGrpc.ItemServiceImplBase {
             responseObserver.onCompleted();
         } else {
             responseObserver.onError(new RuntimeException("Not a leader"));
-        
+
         }
     }
 }
